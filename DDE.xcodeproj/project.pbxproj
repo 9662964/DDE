@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2084D5C45B0C2D03EA7628E8 /* Pods_DDE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E349CF1869B04C24A2D9702 /* Pods_DDE.framework */; };
 		8454907A251A727700789DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84549079251A727700789DBA /* AppDelegate.swift */; };
 		8454907C251A727700789DBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454907B251A727700789DBA /* SceneDelegate.swift */; };
 		8454907E251A727700789DBA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454907D251A727700789DBA /* HomeViewController.swift */; };
@@ -28,9 +29,15 @@
 		845490AE251A76AF00789DBA /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490AD251A76AF00789DBA /* SearchResultViewController.swift */; };
 		845490B0251A784500789DBA /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490AF251A784500789DBA /* PostEditorViewController.swift */; };
 		845490B2251A787700789DBA /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490B1251A787700789DBA /* PublishPostViewController.swift */; };
+		845490B5251A88F800789DBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 845490B4251A88F800789DBA /* GoogleService-Info.plist */; };
+		845490B7251A98AE00789DBA /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490B6251A98AE00789DBA /* DatabaseManager.swift */; };
+		845490B9251A993C00789DBA /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490B8251A993C00789DBA /* AuthManager.swift */; };
+		845490BB251A99A900789DBA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490BA251A99A900789DBA /* StorageManager.swift */; };
+		845490BD251AA34100789DBA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845490BC251AA34100789DBA /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E349CF1869B04C24A2D9702 /* Pods_DDE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84549076251A727700789DBA /* DDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84549079251A727700789DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8454907B251A727700789DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +61,13 @@
 		845490AD251A76AF00789DBA /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		845490AF251A784500789DBA /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		845490B1251A787700789DBA /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		845490B4251A88F800789DBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		845490B6251A98AE00789DBA /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		845490B8251A993C00789DBA /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		845490BA251A99A900789DBA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		845490BC251AA34100789DBA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9446CEA8363EF2F8F537ABCD /* Pods-DDE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDE.debug.xcconfig"; path = "Target Support Files/Pods-DDE/Pods-DDE.debug.xcconfig"; sourceTree = "<group>"; };
+		DB9E9B1CBE5CE3DB65B3AE47 /* Pods-DDE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDE.release.xcconfig"; path = "Target Support Files/Pods-DDE/Pods-DDE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2084D5C45B0C2D03EA7628E8 /* Pods_DDE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064D08DCE22837F611AC40BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E349CF1869B04C24A2D9702 /* Pods_DDE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8454906D251A727700789DBA = {
 			isa = PBXGroup;
 			children = (
 				84549078251A727700789DBA /* DDE */,
 				84549077251A727700789DBA /* Products */,
+				DA9493B34949FE18205467B6 /* Pods */,
+				064D08DCE22837F611AC40BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,10 +111,9 @@
 		84549078251A727700789DBA /* DDE */ = {
 			isa = PBXGroup;
 			children = (
-				8454909E251A743F00789DBA /* Core Tabs */,
 				84549094251A72BA00789DBA /* Resources */,
+				8454909E251A743F00789DBA /* Core Tabs */,
 				84549092251A72AE00789DBA /* Models */,
-				84549091251A72A000789DBA /* Controllers */,
 				84549090251A729A00789DBA /* Views */,
 				84549087251A727B00789DBA /* LaunchScreen.storyboard */,
 				84549082251A727700789DBA /* DDE.xcdatamodeld */,
@@ -109,6 +133,7 @@
 		84549091251A72A000789DBA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				845490B3251A788600789DBA /* OnBoarding */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -126,6 +151,11 @@
 				84549079251A727700789DBA /* AppDelegate.swift */,
 				8454907B251A727700789DBA /* SceneDelegate.swift */,
 				8454908A251A727B00789DBA /* Info.plist */,
+				845490B4251A88F800789DBA /* GoogleService-Info.plist */,
+				845490B6251A98AE00789DBA /* DatabaseManager.swift */,
+				845490BA251A99A900789DBA /* StorageManager.swift */,
+				845490B8251A993C00789DBA /* AuthManager.swift */,
+				845490BC251AA34100789DBA /* Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,7 +170,7 @@
 				84549097251A73EE00789DBA /* CameraViewController.swift */,
 				8454909F251A763200789DBA /* LoginViewController.swift */,
 				845490A1251A763C00789DBA /* RegistrationViewController.swift */,
-				845490B3251A788600789DBA /* OnBoarding */,
+				84549091251A72A000789DBA /* Controllers */,
 			);
 			path = "Core Tabs";
 			sourceTree = "<group>";
@@ -160,6 +190,15 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		DA9493B34949FE18205467B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9446CEA8363EF2F8F537ABCD /* Pods-DDE.debug.xcconfig */,
+				DB9E9B1CBE5CE3DB65B3AE47 /* Pods-DDE.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8454908D251A727B00789DBA /* Build configuration list for PBXNativeTarget "DDE" */;
 			buildPhases = (
+				E0791B5EE6FB21B535EDA2E1 /* [CP] Check Pods Manifest.lock */,
 				84549072251A727700789DBA /* Sources */,
 				84549073251A727700789DBA /* Frameworks */,
 				84549074251A727700789DBA /* Resources */,
+				E7D900240973CA7B98E38131 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845490B5251A88F800789DBA /* GoogleService-Info.plist in Resources */,
 				84549089251A727B00789DBA /* LaunchScreen.storyboard in Resources */,
 				84549086251A727B00789DBA /* Assets.xcassets in Resources */,
 				84549081251A727700789DBA /* Main.storyboard in Resources */,
@@ -225,6 +267,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E0791B5EE6FB21B535EDA2E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DDE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D900240973CA7B98E38131 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDE/Pods-DDE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDE/Pods-DDE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDE/Pods-DDE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84549072251A727700789DBA /* Sources */ = {
@@ -234,17 +318,21 @@
 				845490AC251A76A000789DBA /* SearchViewController.swift in Sources */,
 				845490A0251A763200789DBA /* LoginViewController.swift in Sources */,
 				8454907E251A727700789DBA /* HomeViewController.swift in Sources */,
+				845490BB251A99A900789DBA /* StorageManager.swift in Sources */,
 				84549084251A727700789DBA /* DDE.xcdatamodeld in Sources */,
 				845490B0251A784500789DBA /* PostEditorViewController.swift in Sources */,
 				845490A8251A767E00789DBA /* SettingViewController.swift in Sources */,
 				84549096251A735400789DBA /* ExploreViewController.swift in Sources */,
 				845490A2251A763C00789DBA /* RegistrationViewController.swift in Sources */,
 				845490AA251A769000789DBA /* ListViewController.swift in Sources */,
+				845490B9251A993C00789DBA /* AuthManager.swift in Sources */,
 				8454909A251A740000789DBA /* NotificationViewController.swift in Sources */,
 				845490B2251A787700789DBA /* PublishPostViewController.swift in Sources */,
 				8454907A251A727700789DBA /* AppDelegate.swift in Sources */,
 				8454907C251A727700789DBA /* SceneDelegate.swift in Sources */,
+				845490BD251AA34100789DBA /* Extension.swift in Sources */,
 				845490A6251A767400789DBA /* EditProfileViewController.swift in Sources */,
+				845490B7251A98AE00789DBA /* DatabaseManager.swift in Sources */,
 				8454909C251A740E00789DBA /* ProfileViewController.swift in Sources */,
 				84549098251A73EE00789DBA /* CameraViewController.swift in Sources */,
 				845490AE251A76AF00789DBA /* SearchResultViewController.swift in Sources */,
@@ -390,6 +478,7 @@
 		};
 		8454908E251A727B00789DBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9446CEA8363EF2F8F537ABCD /* Pods-DDE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +497,7 @@
 		};
 		8454908F251A727B00789DBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9E9B1CBE5CE3DB65B3AE47 /* Pods-DDE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
